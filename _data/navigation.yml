@@ -14,6 +14,6 @@ main:
 docs:
   - title: Etc
     children:
-      - title: "Jekyll"
-        url: jekyll/
-        category: "jekyll"
+      - title: "LangChain"
+        url: langchain/
+        category: "langchain"
