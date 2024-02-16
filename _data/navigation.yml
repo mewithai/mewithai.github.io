@@ -10,3 +10,10 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+docs:
+  - title: Etc
+    children:
+      - title: "Jekyll"
+        url: jekyll/
+        category: "jekyll"
