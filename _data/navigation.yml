@@ -1,19 +1,37 @@
-# main links
+# 상단에 표시되는 링크가 main이다.
 main:
 #  - title: "Quick-Start Guide"
 #    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
-   - title: "Category"
-     url: /category/
+
+   - title: "Categories"
+     url: /Categories/
+   - title: "Tags"
+     url: /tags/
+   - title: "About"
+     url: /about/
+
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
 
-docs:
-  - title: Etc
+# sidebar navigation list sample
+sidebar:
+  - title: "LLM"
     children:
       - title: "LangChain"
-        url: langchain/
-        category: "langchain"
+        url: /langchain
+  - title: "Parent Page B"
+    children:
+      - title: "Child Page B1"
+        url: /
+      - title: "Child Page B2"
+        url: /
+      - title: "Child Page B3"
+        url: /
+      - title: "Child Page B4"
+        url: /
+      - title: "Child Page B5"
+        url: /
