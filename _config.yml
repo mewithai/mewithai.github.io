@@ -19,7 +19,7 @@ locale                   : "ko_KR"
 title                    : "Me With AI "
 title_separator          : "이것저것 해보고 느껴보고 정리하자"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "___JSKim"
+name                     : "JSKim"
 description              : "A place to organize your AI knowledge"
 url                      : "https://mewithai.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "AI Minded"
   avatar           : "/assets/images/me_avatar.jpg"
-  bio              : "M"
+  bio              : "M, INTP"
   location         : "Daegu"
   email            : #"Not Instrested"
 #  links:

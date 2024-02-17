@@ -1,6 +1,4 @@
 ---
-sidebar:
-  nav: foo
 toc: true
 toc_sticky: true
 toc_label: "TOC에 제목을 넣어준다."
