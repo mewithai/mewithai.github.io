@@ -12,9 +12,9 @@ tags:
 
 ## `Investing.com`은 만만하지 않다.
 
-  그는 `Cloudflare`가 지키고 있다. (2022년 12월부터) : [참고-invespy가 안되요!](https://github.com/alvarobartt/investiny/issues/73)
+  2022년 12월 부터 `Cloudflare`가 지키고 있다. [참고-invespy가 안되요!](https://github.com/alvarobartt/investiny/issues/73)
 
-  만약 Request에 Response로 `403 Forbidden`이 돌아온다면 `또!` 걸린거다.
+  만약 Request에 Response로 `403 Forbidden`이 돌아온다면 그건 걸린거다.
   
   오늘은 이 `Cloudflare`에서 효과적으로 벗어날 방법을 고민해보자.
 
@@ -38,7 +38,7 @@ print(response.status_code)
 
 ### 어떻게 Bot이라고 아는가?
 
-아래는 Cloudflare가 Bot인지 검증하는 방법을 나열한 것이다.
+Cloudflare는 아래와 같은 방법으로 Bot을 인지한다고 한다.
 
 - IP 데이터베이스: 악성 또는 의심스러운 활동과 관련된 IP 주소를 식별하고 차단
 - 사용자 행동 분석: 마우스 움직임, 키보드 입력, 스크롤 등 매번 같은 패턴을 하는지 확인
@@ -63,7 +63,7 @@ print(response.status_code)
 
 ### requests vs Chrome+Selenium
 
-아래는 2가지 방식의 비교이다.
+아래의 기능 비교 처럼 reqeusts는 속도가 빠르고 쉽게 구현이 가능하다. 하지만 `Investing.com`은 이게 안먹힌다.
 
 | 기능/특징 | `requests` 모듈 | `Chrome Driver + Selenium` |
 |-----------|----------------|-----------------------------|
@@ -96,7 +96,7 @@ print(response.status_code)
 
 ### Action Item
 
-- Mission#1: `FlareSolverr`를 라즈베리파이에 올려보자.
+- Mission#1: `FlareSolverr`를 라즈베리파이에 올려보자. [완료:flaresolverr on RaspberryPi]({{ site.url }}{{ site.baseurl }}/scraping/flaresolverr-on-RaspberryPi/)
   - Investing.com 전용으로 쓸 수도 있을 것이다.
 - Mission#2: `#1`이 된다면 지금의 CASE와 비교해서 Time 측면에서 잇점이 있는지 분석하자
   - Chrome 구동시간을 줄이기 위해서 Session을 재활용하는 방법을 연구하자
