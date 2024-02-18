@@ -34,9 +34,11 @@ response = requests.get(url, headers=headers)
 print(response.status_code)
 ```
 
- 정상은 `200`을 차단된 애는 `403`을 Response한다. 같은 Code이지만 다른 결과이니 요주의 IP는 그냥 믿고 거르는 듯 하다. 정확하게는 특정 패턴이 걸리고 IP가 등록되면서 검증 절차 조차도 하지 않는다고 보는게 맞다.
+ 정상은 `200`을 차단된 애는 `403`을 Response한다. 같은 Code이지만 다른 결과이니 Black으로 처리된 IP는 그냥 검증없이 차단하하는 듯 하다.
 
 ### 어떻게 Bot이라고 아는가?
+
+아래는 Cloudflare가 Bot인지 검증하는 방법을 나열한 것이다.
 
 - IP 데이터베이스: 악성 또는 의심스러운 활동과 관련된 IP 주소를 식별하고 차단
 - 사용자 행동 분석: 마우스 움직임, 키보드 입력, 스크롤 등 매번 같은 패턴을 하는지 확인
@@ -47,13 +49,13 @@ print(response.status_code)
 - 머신 러닝: 머신 러닝 모델을 훈련시켜 봇 트래픽을 식별
 - 브라우저 검증: JavaScript 챌린지 같은 것으로 브라우저가 실제 브라우저인지를 검증
 
-내가 주로 걸린건 Javascript 챌린지이고 그 이후 IP Block 관리 당한 듯하다. `reqeust module`을 주로 썼는데 `javascript`를 실행하고 결과를 받기 힘들었기 때문이다.
+내가 주로 걸린건 Javascript 챌린지이고 이후 IP Block 관리된다. `reqeusts`을 주로 썼는데 `javascript`를 실행하고 결과를 받기 힘들었기 때문이다.
 
 ## 어떻게 풀지?
 
-Cloudflare가 들어온 이후 가장 현실적인 방법은 `Chrome Driver`와 `Selenium`의 조합 이였다. 그냥 사람이 하는 브라우징과 같은 방식으로 하는 것. 하지만 Chrome을 Full로 돌리기엔 나의 HW 인프라가 부족하기에 속도에서 불리하였고 `Chrome` 구동 중 Loading이 늦거나 `Selemium`에서 예외가 발생하면 여지없이 수집이 실패하고 만다.
+Cloudflare가 들어온 이후 가장 현실적인 방법은 `Chrome Driver`와 `Selenium`의 조합 이였다. 그냥 사람이 하는 브라우징과 같은 방식으로 하는 것. 하지만 Chrome을 Full로 돌리기엔 내 HW 인프라가 부족하기에 속도에서 불리하였고 `Chrome` 구동 중 Loading이 늦거나 `Selemium`에서 예외가 발생하면 여지없이 수집이 실패하고 만다.
 
- 결국 내가 원하는 건 `속도`와 `안정성` 그리고 저렴이 Infra에서도 돌아가는 `용이성`이다. 
+ 결국 내가 원하는 건 `속도`와 `안정성` 그리고 저렴이 Infra에서도 돌아가는 `용이성`이다.
 
  더 나은 방법이 있는지 알아볼 때이다.
 
