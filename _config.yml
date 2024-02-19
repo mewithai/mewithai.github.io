@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "contrast" #"default", "air", "aqua", "contrast", "da
 # Site Settings
 locale                   : "ko_KR"
 title                    : "Me With AI "
-title_separator          : "이것저것 해보고 느껴보고 정리하자"
+title_separator          : ""
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "JSKim"
 description              : "A place to organize your AI knowledge"
@@ -96,9 +96,9 @@ baidu_site_verification  :
 
 # Analytics
 analytics:
-  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          : G-TJP1ZTVPHX
+    tracking_id          : "G-TJP1ZTVPHX"
     anonymize_ip         : # true, false (default)
 
 
