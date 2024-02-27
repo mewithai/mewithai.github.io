@@ -77,6 +77,22 @@ print(llm("The first man on the moon was ..."))
 
 - Local Computer CPU가 100%를 침에도 속도는 최소 10배 이상으로 느려짐
 
+```python
+# initialize LLM (we use ChatOpenAI because we'll later define a `chat` agent)
+logger.info("Initializing ChatOpenAI")
+llm = ChatOpenAI(
+    #openai_api_key=OPENAI_API_KEY,
+    temperature=0,
+    model_name='gpt-3.5-turbo'
+)
+
+## 위를 아래로 대체함
+
+## ollma로 대체해보자. 넘드리다 포기
+from langchain_community.llms import Ollama
+llm = Ollama(model="llama2")
+```
+
 ## 결론 And Next Step
 
 - 기존의 `Custom Tools` Sample Code를 Ollma로 바꿨을때 속도면에서 OpenAI API를 따라올 수 없었다.
