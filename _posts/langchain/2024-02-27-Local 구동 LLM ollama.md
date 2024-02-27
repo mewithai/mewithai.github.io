@@ -1,13 +1,12 @@
 ## 배경 및 목적
 
 - Local PC에서 돌릴 수 있는 LLM `ollama`에 대해서 학습
-- 일단, 만만한 Windows에 그냥 설치 
-- `ollama`에게 일을 줘보자.
+- OpenAI LLM을 `ollama`로 대체시켰을 때 기대 효과 파악
 
 ## 설치
 
 - Web Site는 다음과 같다 : https://ollama.com/download
-  - 위 Site에서 Windows용 설치
+  - 일단, 만만한 Windows에 그냥 설치, Preview이다.
 - 실행하니까 엄청난 Download를...
   - https://python.langchain.com/docs/integrations/llms/ollama
 
@@ -29,7 +28,7 @@ success
 
 ## 시험
 
-- 영어는 잘 동작함, 알아는 듣지만 생성시 엄청난 Delay가 발생하고, 답변도 엉성함
+- 영어는 잘 동작함, 한글은 알아는 듣지만 생성시 엄청난 Delay가 발생하고, 답변도 엉성함
 
 ```
 >>> Hello?
@@ -51,19 +50,17 @@ you prefer. How may I assist you today?
 >>> 응ㅎ한글로 너의 소개를 해줘
 Of course! Here's my introduction in Korean:
 
-안녕하세요! 저는 LLaMA입니다. Meta AI에서 훈련된 대화 모델입니다. 저는 여러 가지 질문을 답하고, 도와주시겠습니다. 뭔가  특정한 话题이나 问题를 어떻게 봐졌어요?
+안녕하세요! 저는 LLaMA입니다. Meta AI에서 훈련된 대화 모델입니다. 저는 여러 가지 질문을 답하고, 도와주시겠습니다.
+뭔가  특정한 话题이나 问题를 어떻게 봐졌어요?
 ```
 
 ## LangChain과 연동
 
-참고Site
-
-- https://python.langchain.com/docs/guides/local_llms
-
+- [참고Site](https://python.langchain.com/docs/guides/local_llms)
 - ollama 실행 명령어: `ollama pull llama2`
-- ollama는 local에 11434 Port를 열고 서비스를 받는다.
+- ollama는 localhost 11434 Port에 API 서버를 운영한다.
 
-샘플 코드
+### 샘플 코드
 
 ```python
 from langchain_community.llms import Ollama
@@ -71,12 +68,13 @@ from langchain_community.llms import Ollama
 llm = Ollama(model="llama2")
 
 ## 프린트 해야함
-llm("The first man on the moon was ...")
+print(llm("The first man on the moon was ..."))
+
+## 어쩌구 저쩌구 결과 
 ```
 
 ### 일줘보기
 
-- 기존의 `Custom Tools` Sample Code를 Ollma로 바꿨을때 속도면에서 OpenAI API를 따라올 수 없었다.
 - Local Computer CPU가 100%를 침에도 속도는 최소 10배 이상으로 느려짐
 
 ## 결론 And Next Step
