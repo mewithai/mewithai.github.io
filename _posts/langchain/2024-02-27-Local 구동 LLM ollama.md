@@ -1,3 +1,14 @@
+---
+toc: true
+toc_sticky: true
+toc_label: "Local LLM ollama써보기"
+categories:
+  - langchain
+tags:
+  - 자동화Bot
+  - langchain
+---
+
 ## 배경 및 목적
 
 - Local PC에서 돌릴 수 있는 LLM `ollama`에 대해서 학습
