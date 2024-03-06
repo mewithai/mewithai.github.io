@@ -134,7 +134,7 @@ if __name__ == "__main__":
   - chroma client를 이용해서 DB에 넣기 때문에 `collection_name`이 꼭 들어가야 한다.
 - `langchain_client`의 객체 이용시 생성자에서 `embedding`과 `chroma client`, `collection_name`을 줬으니까 안 줘도 되지 않냐는 것이 내 생각인데, 안 주었다가 데이터가 안들어가서 헤메였다.
 - `from_documents`가 `Chroma`를 Return하니까 또 더 헷갈리는 듯 하다.
-- **참고로 난 개발자가 아니다. 내가 편해질려고 Agent를 만들고 일을 시키고 싶은 사람일 뿐이다.**
+- **참고로 난 개발자가 아니다. 내가 편해질려고 Agent를 만들고 일을 시키고 싶은 사람일 뿐이다. 개발자는 쉬울려나?**
 
 ![]({{ site.url }}{{ site.baseurl }}/assets/images/20240306224655.png)
 
