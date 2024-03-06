@@ -95,7 +95,7 @@ if __name__ == "__main__":
 ![]({{ site.url }}{{ site.baseurl }}/assets/images/20240306222245.png)
 
 - Chroma DB안에서 Table에 해당하는 Collection은 `js_collection`으로 줬다.
-  - **중요** Insert할 때 꼭 줘야한다.
+  - **중요!** Insert할 때 꼭 줘야한다.
 
 ```python
     def __init__(self):
@@ -129,7 +129,7 @@ if __name__ == "__main__":
 ### ChromaDB로 넣기
 
 - `chromadb`로 넣을때는 langchain의 Chroma Class의 `from_documents`를 썼다.
-- `return`으로 `Chroma`를 Return하는데 chromadb client를 파라미터로 넘겼기에 필요가 없다.
+- `return`으로 `Chroma`를 인데 생성자로 `self.langchain_client`가 있어서 필요없다.
   - 이 부분을 이해하는데 많이 헷갈렸다.
   - chroma client를 이용해서 DB에 넣기 때문에 `collection_name`이 꼭 들어가야 한다.
 - `langchain_client`의 객체 이용시 생성자에서 `embedding`과 `chroma client`, `collection_name`을 줬으니까 안 줘도 되지 않냐는 것이 내 생각인데, 안 주었다가 데이터가 안들어가서 헤메였다.
