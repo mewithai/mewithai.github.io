@@ -1,4 +1,5 @@
 ---
+excerpt: "StreamLit과 Langchain을 연결시키고 코드를 파헤쳐보자."
 toc: true
 toc_sticky: true
 toc_label: "StreamLit 활용 ChatBot"

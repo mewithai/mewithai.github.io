@@ -1,4 +1,5 @@
 ---
+excerpt: "SLM에 대해서 이해하기 위한 ollama 써보기"
 toc: true
 toc_sticky: true
 toc_label: "Local LLM ollama써보기"

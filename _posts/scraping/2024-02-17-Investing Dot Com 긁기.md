@@ -1,4 +1,5 @@
 ---
+excerpt: "Investing.com을 긁기 위한 방법 생각해보기"
 toc: true
 toc_sticky: true
 toc_label: "Scraping investing.com"

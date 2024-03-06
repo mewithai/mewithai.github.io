@@ -1,4 +1,5 @@
 ---
+excerpt: "LangChain Agent Custom Tools을 사용하는 방법에 대한 고찰"
 toc: true
 toc_sticky: true
 toc_label: "LangChain Agent Custom Tools에 대해서"

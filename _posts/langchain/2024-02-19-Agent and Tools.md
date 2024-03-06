@@ -1,5 +1,5 @@
 ---
-excerpt: "LangChain에서 Agent의 역활"
+excerpt: "LangChain에서 Agent와 Tool에 대한 고찰"
 toc: true
 toc_sticky: true
 toc_label: "Agent and his tools"
