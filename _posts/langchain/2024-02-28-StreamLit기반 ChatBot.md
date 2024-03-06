@@ -115,7 +115,7 @@ for message in st.session_state.messages:
 - st.session_state.messages
 - st.session_state.chat_messages
 
-Session State에 대한 설명은 [공식홈(https://docs.streamlit.io/library/api-reference/session-state)]을 참고
+Session State에 대한 설명은 [공식홈](https://docs.streamlit.io/library/api-reference/session-state)을 참고
 
 Session State는 Session에 대해서 `변수를 공유`하고 `설정된 상태를 유지` 시키고 `Callback을 활용`할 수 있게 해준다. 거기에 MultiPage APP을 만들었을때도 상태가 유지되게 한다.
 
@@ -197,7 +197,7 @@ if prompt := st.chat_input("What is up?"):
   - 채팅관리에 `User`가 `Content`를 했다고 추가
   - 형식은 `Dict`이다.
 
-- `with st.chat_message("user"): / st.markdown(prompt)`
+- `with st.chat_message("user"): \ st.markdown(prompt)`
   - 채팅화면 맨 아래에다가 내용을 추가
 
 > Assistant가 답을 한다면
