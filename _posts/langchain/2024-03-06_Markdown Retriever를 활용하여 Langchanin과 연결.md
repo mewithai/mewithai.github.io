@@ -13,8 +13,8 @@ tags:
 ## 배경과 목표
 
 - 내 `Second Brain`은 `Markdown`으로 되어 있고 이를 `LLM Agent`와 연결하면 시너지가 높다. 그래서 Langchain의 Retriever를 보는데..
-- Langchain 문서는 그냥 어렵다. 봐도 잘 모르겠어서 내 방법으로 해석이 필요했다.
-- `Markdown`을 잘 `Split`하여서 `Chroma DB`에 넣고 Langchain에 연결해서 `RAG`를 만들어보자.
+- Langchain 문서는 그냥 어렵다. 봐도 잘 모르겠어서 내 방법으로 해석이 필요하다.
+- `Markdown`을 잘 `Split`하여서 `Chroma DB`에 넣고 Langchain에 연결해서 `RAG`를 만들 준비를 하자.
 
 ## Code의 출처
 
@@ -22,7 +22,7 @@ tags:
 
 ## ChromaDB 연계 코드
 
-기존 코드가 생소하고 복잡해서 `Wrapper` 따로 하나 만들었다.
+원본 코드가 생소하고 복잡해서 `Wrapper` 따로 하나 만들었다.
 
 같은 단어들이 너무 반복되어서 어느 Class에서 온 것인지 헷갈려서 차근차근 하나씩 봤다.
 
@@ -87,11 +87,13 @@ if __name__ == "__main__":
   - 생성자로 들어간 Path는 내용이 저장될 `path` 이다.
   - 여기의 `chromadb`는 `import chromadb`의 `chromadb`이다. 헷갈리지 말자.
 - Langchain에 접근하기 위해서 Client를 생성 : `self.langchain_client`
+  - 정확한 역활은 `langchan chromadb client`이다
   - 여기의 `Chroma`는 `from langchain_community.vectorstores import Chroma`의 `Chroma`이다
   - 생성자로 `chromadb_client`를 넣는다.
   - Chorma의 Reference 문서: [langchain_community.vectorstores.chroma.Chroma](https://api.python.langchain.com/en/latest/vectorstores/langchain_community.vectorstores.chroma.Chroma.html)
-  - 생성자에서 chromaDB Client를 확인하자
+
 ![]({{ site.url }}{{ site.baseurl }}/assets/images/20240306222245.png)
+
 - Chroma DB안에서 Table에 해당하는 Collection은 `js_collection`으로 줬다.
   - **중요** Insert할 때 꼭 줘야한다.
 
@@ -108,7 +110,7 @@ if __name__ == "__main__":
 - splitter를 할때 `#, ##, ###`로 하라고 줬다. H1, H2, H3의 MetaInfo를 바꿔도 좋다.
 - Return으로 `splitted_result`는 Langchain Document의 List이다.
   - 참고: [`langchain_text_splitters.markdown.MarkdownHeaderTextSplitter`](https://api.python.langchain.com/en/latest/markdown/langchain_text_splitters.markdown.MarkdownHeaderTextSplitter.html#langchain_text_splitters.markdown.MarkdownHeaderTextSplitter)
-  - 위 Class의 `split_text()`의 Return `List[Document]`
+  - 위 Class의 `split_text()`의 Return은 `List[Document]`이다.
   - Langchain Document : [langchain_core.documents.base.Document](https://api.python.langchain.com/en/latest/documents/langchain_core.documents.base.Document.html#langchain_core.documents.base.Document)
 
 ```python
@@ -144,7 +146,8 @@ if __name__ == "__main__":
              embedding=self.embedding_fn,
              client=self.chroma_client,
              collection_name="js_collection")
-         
+
+# 객체없이 바로 Method를 불러다 써도 된다.         
 #        Chroma.from_documents(documents=splitted_document,
 #                              embedding=self.embedding_fn,
 #                              client=self.chroma_client ,
@@ -167,7 +170,7 @@ if __name__ == "__main__":
 
 - `self.langchain_client.get()`으로 조회해볼 수 있는데 `embedding vector`가 `[none]`으로 나온다. 
   - 참고: [Chroma database embeddings none when using get](https://stackoverflow.com/questions/76482987/chroma-database-embeddings-none-when-using-get)
-- 너무 많이 나와서 그런 것이니 아래 2줄을 적당히 선택 활용하자.
+- 너무 많이 나와서 그런 것이니 아래 2줄을 적당한 것을 선택 활용하자.
 
 ```python
    def peek(self):
@@ -178,7 +181,7 @@ if __name__ == "__main__":
 ## 결론 및 Next Step
 
 - ChromaDB를 기반으로 Markdown의 Retriever를 만들어 보았다.
-- `Chain`으로 연결하였을 때 정상동작함도 확인하였다.
+- `Chain`으로 연결하였을 때 정상 동작함도 확인하였다.
 - `langchain`과 `python`은 어렵다.
 
 ### Next Step
