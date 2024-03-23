@@ -71,7 +71,7 @@ tags:
         chain.run(contents)
 ```
 
- 위 코드는 다음의 Site에서 참고하였다. : [Link]
+ 위 코드는 다음의 Site에서 참고하였다. : [Link](https://teddylee777.github.io/langchain/langchain-tutorial-05/)
 
 - 기사의 내용이 너무 길기 때문에 `Loader`로 받은 내용을 글자수 단위로 쪼개서 `Documents`로 만든다.
   - 여기에서 `News Contents`외에 다수의 내용이 포함되어 버린다.
@@ -79,7 +79,7 @@ tags:
   
 ### 분석
 
-시험 URL로 을 Loading하였다.
+시험 URL로 [이투데이](https://www.etoday.co.kr/news/view/2343297)을 Loading하였다.
 
 Webloader는 다음 input_documents를 체인으로 넘기고 마지막 Output_text를 요약하였다.
 
@@ -116,7 +116,7 @@ Webloader는 다음 input_documents를 체인으로 넘기고 마지막 Output_t
 
 - 네이버 뉴스 API를 버린다.
 - News는 YTN이나 연합뉴스 같이 Format이 변하지 않는 것들만 사용한다.
-  - Requests와 BeautifulSoup를 사용해서 TAG별로 분리한다. 
+  - Requests와 BeautifulSoup를 사용해서 TAG별로 분리한다.
 
 ### Next Step
 
