@@ -124,7 +124,7 @@ GPT3.5에 대한 이슈일 수도 있는데 Tokens 수를 세어보면 다음과
 
 불행하게도 CrewAI의 기본 Model은 비싼 GPT4이다. 나의 가난에 슬퍼하자.
 
-![]({{ site.url }}{{ site.baseurl }}assets/images/20240324180210.png)
+![]({{ site.url }}{{ site.baseurl }}/assets/images/20240324180210.png)
 
 ## 결론 및 Next Step
 
