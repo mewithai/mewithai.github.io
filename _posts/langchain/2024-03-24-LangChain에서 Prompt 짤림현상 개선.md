@@ -64,4 +64,4 @@ Final Answer: [{'link': 'https://www.mk.co.kr/article/10973017', 'title': '"의�
 
 ### Next Step
 
-- 왜 Max tokens에 걸렸을 까를 자면서 생각해보자.
+- `왜 Max tokens에 걸렸을까`를 자면서 생각해보자. 무의식의 세계야 해결해줘~!
