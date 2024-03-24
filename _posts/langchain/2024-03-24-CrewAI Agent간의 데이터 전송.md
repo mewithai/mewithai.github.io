@@ -118,7 +118,7 @@ Final Answer: [{'link': 'https://www.mk.co.kr/article/10972899', 'title': '봄�
 
  위 결과에서 보면 Full Search결과가 넘어가지 않고 중간에 잘리는 것을 볼 수 있다. `대통`에서 잘리고 이건 매번 동일하다. LangSmith에서 확인해봐도 실제 OpenAI로 넘어가는 Prompt가 잘리는 것을 확인할 수 있다.
 
-![]({{ site.url }}{{ site.baseurl }}assets/images/20240324175846.png)
+![]({{ site.url }}{{ site.baseurl }}/assets/images/20240324175846.png)
 
 GPT3.5에 대한 이슈일 수도 있는데 Tokens 수를 세어보면 다음과 같다. 실제 CrewAI 기본 System prompt가 상당히 길기 때문에 조금만 써도 2400 Character는 넘어가는 듯 하다. 다행히 [공식문서](https://platform.openai.com/docs/models/gpt-3-5-turbo)에서 나오는 GPT3.5-turbo에 나오는 Context Windows는 16,385 tokens이다.
 
