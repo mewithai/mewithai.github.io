@@ -2,7 +2,7 @@
 excerpt: "네이버에서 제공한 News를 요약하는 Agent의 문제점 "
 toc: true
 toc_sticky: true
-toc_label: "CrewAI Agent 생성하기"
+toc_label: "News Agent Garbage Data"
 categories:
   - langchain
 tags:
