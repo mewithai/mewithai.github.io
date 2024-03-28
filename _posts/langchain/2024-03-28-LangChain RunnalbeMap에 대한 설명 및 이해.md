@@ -10,6 +10,7 @@ categories:
 tags:
   - 자동화Bot
   - langchain
+permalink: /langchain/LangChain-RunnableMap/
 ---
 
 ## 배경 및 목적
@@ -87,8 +88,7 @@ Chain으로 넘어가는 결과는 다음과 같다.
 
 ## 참고 자료
 
-- ChatGPT답변
-  - [ChatGPTURL]({{ site.url }}{{ site.baseurl }}/assets/files/Pipeline_Model_Transformation.md)
+- ChatGPT답변 : [About RunnableMap]({{ site.url }}{{ site.baseurl }}/assets/files/Pipeline_Model_Transformation.md)
 
 ## 결론 및 NextStep
 
