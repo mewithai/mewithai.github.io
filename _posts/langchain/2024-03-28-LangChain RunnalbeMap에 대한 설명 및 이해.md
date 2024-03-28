@@ -1,7 +1,7 @@
 ---
 title: "LangChain RunnalbeMap에 대한 설명 및 이해"
 last_modified_at: 2024-03-24 13:00:00 
-excerpt: ""
+excerpt: "RunnableMap에 대해서 설명하고 예시를 정리하자."
 toc: true
 toc_sticky: true
 toc_label: "특정 언론사 News"
