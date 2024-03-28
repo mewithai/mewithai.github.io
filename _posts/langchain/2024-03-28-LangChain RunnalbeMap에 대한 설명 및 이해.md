@@ -4,7 +4,7 @@ last_modified_at: 2024-03-24 13:00:00
 excerpt: "RunnableMap에 대해서 설명하고 예시를 정리하자."
 toc: true
 toc_sticky: true
-toc_label: "특정 언론사 News"
+toc_label: "목차"
 categories:
   - langchain
 tags:
