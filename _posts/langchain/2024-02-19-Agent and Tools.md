@@ -1,5 +1,6 @@
 ---
-excerpt: "LangChain에서 Agent와 Tool에 대한 고찰"
+title: "[LangChain] Understanding the Role and Functionality of Agents"
+excerpt: "LangChain에서 Agent의 역활을 이해한다."
 toc: true
 toc_sticky: true
 toc_label: "Agent and his tools"
@@ -8,6 +9,7 @@ categories:
 tags:
   - 자동화Bot
   - langchain
+permalink: /langchain/agent-and-tools/
 ---
 
 ## 배경과 목표
