@@ -51,13 +51,11 @@ Tools are interfaces that an agent can use to interact with the world.
 - The function to call
 - Whether the result of a tool should be returned directly to the user
 
-가능하면 위의 정보를 모두 기술해두는 것이 `Action-taking systems`에서 추론을 하는 데 유리하다. 툴이 어떤 정보를 받아 들이고 어떻게 동작하는 지를 최대한 명확하게 기술해야한다. 
+가능하면 위의 정보를 모두 기술해두는 것이 `Action-taking systems`에서 추론을 하는 데 유리하다. 툴이 어떤 정보를 받아 들이고 어떻게 동작하는 지를 최대한 명확하게 기술해야한다.
 
 ## Code Sample
 
 ### Default Tools
-
-샘플
 
 ```python
 from langchain_community.tools import WikipediaQueryRun
@@ -106,25 +104,25 @@ class WikiInputs(BaseModel):
 
 툴의 정의
 
-- 이전에는 `tool = WikipediaQueryRun(api_wrapper=api_wrapper)`라고 툴을 선언하였음
-
 ```python
-tool = WikipediaQueryRun(
-    name="wiki-tool",
-    description="look up things in wikipedia",
-    args_schema=WikiInputs,
-    api_wrapper=api_wrapper,
-    return_direct=True,
+tool_before = WikipediaQueryRun(
+    api_wrapper=api_wrapper
+)
+
+
+tool_after = WikipediaQueryRun(
+    args_schema=WikiInputs,   # 요기가 추가
+    api_wrapper=api_wrapper 
 )
 ```
 
 이전의 Tool과 비교해보자.
 
 ```python
->>> tool.args
+>>> tool_before.args
 {'query': {'title': 'Query', 'type': 'string'}}
 
->>> tool.args
+>>> tool_after.args
 {'query': {'title': 'Query', 'description': 'query to look up in Wikipedia, should be 3 or less words', 'type': 'string'}}
 ```
 
@@ -133,7 +131,7 @@ BaseModel을 사용해서 `args`에다가 Description을 추가해주었다. 이
 아래는 수정된 Tool의 전체이다.
 
 ```
->>> tool
+>>> tool_after
 WikipediaQueryRun(
      name='wiki-tool',
      description='look up things in wikipedia',
