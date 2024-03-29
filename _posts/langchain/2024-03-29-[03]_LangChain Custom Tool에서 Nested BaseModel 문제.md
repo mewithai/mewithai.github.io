@@ -1,5 +1,5 @@
 ---
-title: "LangChain Custom Tool의 args_schema은 Nested BaseModel 지원 안한다.
+title: "LangChain Custom Tool의 args_schema은 Nested BaseModel 지원 안한다."
 last_modified_at: 2024-03-29 21:00:00 
 excerpt: " Nested BaseModel을 argos_schema를 넣으면 Error가 발생하는 이유"
 toc: true
