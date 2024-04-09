@@ -16,11 +16,11 @@ permalink: /langchain/Use-Database-to-save-tokens/
 
  CrewAI Framework를 이용하여 News 분석 Agents를 만들고 있다. News를 수집하고 LLM으로 분석하고 결과를 보여주는 것인데, 총 4개의 AI Agent를 만들고 Task를 주었다. 각 Agent로 Data를 넘길때 `LIST`형태로 넘겨주고 있는데, 만약 수집 단계에서 너무 많은 News가 수집되면 다음 Agent로 넘기는 과정에서 속도가 느려지고 많은 Tokens이 소모되는 문제점이 있다. LIST안에 URL과 제목, Contents등이 들어 있기 때문이다. 이를 해결하기 위해서 Agent에 Database를 연동하고 News가 수집된 Row의 ID만 넘겨주는 방식으로 Tokens을 절약해 보고자한다.
 
-![]({{ site.url }}{{ site.baseurl }}/images/20240325145846.png) ]
+![]({{ site.url }}{{ site.baseurl }}/images/20240325145846.png)
 
 넘길 때도 List로 받을 때도 List로 받으니까 불필요한 Text 정보까지 다 들어가서 Tokens은 커지고 속도는 느려짐.
 
-![]({{ site.url }}{{ site.baseurl }}/images/20240401111433.png) ]
+![]({{ site.url }}{{ site.baseurl }}/images/20240401111433.png)
 
 ### 목표
 
@@ -34,7 +34,7 @@ permalink: /langchain/Use-Database-to-save-tokens/
 
 DB는 NO를 Auto Increment로 잡고 Table을 구성하였다.
 
-![]({{ site.url }}{{ site.baseurl }}/images/20240409090113.png) ]
+![]({{ site.url }}{{ site.baseurl }}/images/20240409090113.png)
 
  각 Agent로 Data를 넘길때 `NO`의 List만 넘기면 Agent들이 News를 꺼내서 쓰고 Update하도록 DB Class를 만들어 넣었다. Method만 쓰면 다음과 같다. Coding은 `CoPilot`이 알아서 해줬다.
 
