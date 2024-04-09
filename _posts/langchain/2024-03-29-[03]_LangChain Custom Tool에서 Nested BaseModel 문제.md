@@ -72,17 +72,17 @@ class NewsAnalysisTool():
 
 어렵지 않게 동일한 문제를 겪고 있는 사람들이 있었다. [langchain-ai github](https://github.com/langchain-ai/langchain/issues/9375)에서도 비슷한 질문이 올라왔다.
 
- `dosubot`이 확인해 준 바로는 `아직 안된다` 이다. 여기는 정말 재미있는 것이 질문도 LLM Agent(dosubot)가 대답한다. 대박! 정말 똑똑한 사람인줄 알았는데..
+ `dosubot`이 확인해 준 바로는 `아직 안된다` 이다. 그리고 친절하게도 Package를 수정하여 지원할 수 있는 방법도 알려주고 있다. 
 
 > Based on your description, it seems that the LangChain framework does not natively support nested Pydantic models in the args_schema parameter of the StructuredTool function.
 
 ## 결론
 
-제안된 Package 코드를 건드리면 다른 곳이랑 맞지 않으니, `쓰지말자.`
+수정된 Package 코드를 받았지만, 잘못 건드리면 문제가 생길 수 있으니 그냥 `쓰지말자.` 
 
-### 샘플코드
+### 참고 Code
 
-아래는 [공식 홈페이지](https://python.langchain.com/docs/modules/agents/tools/custom_tools#tool-decorator)에 소개된 `Custom Tool` Code이다. 그냥 얘까지만 친하게 지내자. 
+아래는 [공식 홈페이지](https://python.langchain.com/docs/modules/agents/tools/custom_tools#tool-decorator)에 소개된 `Custom Tool` Code이다. 공홈에서도 Nested된 Parameter는 쓰고 있지 않다. 시간이 지나면 보완되겠지뭐..
 
 ```python
 class SearchInput(BaseModel):
@@ -94,6 +94,3 @@ def search(query: str) -> str:
     """Look up things online."""
     return "LangChain"
 ```
-
-
-
