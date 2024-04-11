@@ -19,7 +19,7 @@ permalink: /langchain/Use-Database-to-save-tokens/
 
 ![]({{ site.url }}{{ site.baseurl }}/assets/images/20240325145846.png)
 
- 각 Agent로 Data를 넘길때 News의 내용이 포함된 `LIST` 형태로 넘겨주고 있는데, 이것들이 모두 LLM으로 전달되기 때문에 많은 `Token`이 소모되는 문제점이 있다. LIST안에 URL과 제목, 이를 해결하기 위해서 Agent에 Database를 연동하고 News가 수집된 Row의 ID만 넘겨주는 방식으로 Token을 절약해 보고자한다.
+ 각 Agent로 Data를 넘길때 News의 내용이 포함된 `LIST` 형태로 넘겨주고 있는데, 이것들이 모두 LLM으로 전달되기 때문에 많은 `Token`이 소모되는 문제점이 있다. 이를 해결하기 위해서 Agent에 Database를 연동하고 News가 수집된 Row의 ID만 넘겨주는 방식으로 Token을 절약해 보고자한다.
 
 아래는 내용이 너무 길어 OpenAI에서 정상적으로 처리되지 못하고 TimeOut이 발생한 사례이다. 
 
