@@ -137,7 +137,7 @@ html_content = markdown(md_with_css)
 
 ## 결론 및 Next Step
 
-`Keyword 검색` -> `Garbage선별` -> `내용 요약` -> `인사이트 도출` -> `리포트 생성` -> `리포트 발송`의 모든 과정 AI Agent에 의해서 행해지도록 구현해 보았다. Tokens 절약을 위해서 Database에 저장하였고 큰 없이 사용하고 있다. 이메일로 수신된 내용은 다음과 같다.
+`Keyword 검색` -> `Garbage선별` -> `내용 요약` -> `인사이트 도출` -> `리포트 생성` -> `리포트 발송`의 모든 과정 AI Agent에 의해서 행해지도록 구현해 보았다. Tokens 절약을 위해서 Database에 저장하였고 이슈 없이 사용하고 있다. 이메일로 수신된 내용은 다음과 같다.
 
 ![]({{ site.url }}{{ site.baseurl }}/assets/images/20240412101729.png)
 
@@ -146,10 +146,10 @@ html_content = markdown(md_with_css)
 - LangChain Agent의 CustomTool에 대해서 이해할 수 있었다.
 - Pydantic에 대한 이해를 기반으로 CustomTool의 Input/Output format에 대해서 이해하였다.
 - ChatGPT3.5, ChatGPT4를 사용해보면서 ChatGPT4가 성능은 좋지만 더럽게 비싸다는 것을 알았다. 결국 성능 좋은 AI를 가진사람이 승자가 될 것이다.
-- CrewAI Framework에서 Role, Task 등을 직접 적용해보면서 동작 메커니즘을 이해 할 수 있엇다.
+- CrewAI Framework에서 Role, Task 등을 직접 적용해보면서 동작 메커니즘을 이해 할 수 있었다.
 
 ### Next Step
 
-- `Invesingn.com`의 Article을 긁어서 DB로 쌓고 분석시켜보자.
+- `Investing.com`의 Article을 긁어서 DB로 쌓고 분석시켜보자.
 - LLM의 추론(Reasoning + Act) 능력을 좀 더 잘 활용할 수 있는 방법을 생각해보자.
 - AI 녀석들이 나를 뛰어 넘을 것 같다. 반도체 주식에 더 투자하자.
