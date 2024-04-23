@@ -9,7 +9,7 @@ categories:
 tags:
   - 자동화Bot
   - AI Agent
-permalink: /langchain/Use-Database-to-save-tokens/
+permalink: /langchain/Using_database_to_save_tokens_in_Agent/
 ---
 
 ## 배경과 목표

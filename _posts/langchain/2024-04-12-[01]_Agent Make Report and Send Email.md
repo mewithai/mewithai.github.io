@@ -9,7 +9,7 @@ categories:
 tags:
   - 자동화Bot
   - AI Agent
-permalink: /langchain/Use-Database-to-save-tokens/
+permalink: /langchain/Write a Markdown Report to an AI Agent and shoot it to Mail/
 ---
 
 ## 배경과 목표
