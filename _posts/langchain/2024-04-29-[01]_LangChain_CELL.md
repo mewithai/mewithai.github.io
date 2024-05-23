@@ -3,6 +3,7 @@ permalink: /langchain/About-LangChain-LCELL-240429/
 title: "LangChain의 LCELL 쉽게 이해하기"
 excerpt: "LangChain의 핵심 개념인 LCELL을 쉽게 이해할 수 있도록 정리합니다."
 author: "Jinsu Kim"
+published: true
 toc: true
 toc_sticky: true
 toc_label: "목차"
@@ -79,7 +80,9 @@ print(chain.invoke({}))
 
 ```
 
-`prompt | llm | output_parser`이 LCELL로 연결된 구조이고, 이것이 `Chain` 처럼 보여야 LangChain의 기본을 이해하였다고 볼 수 있음.
+## 정리
+
+위 예시에서 `prompt | llm | output_parser`은 LCELL로 연결된 구조이고, 이것이 `Chain` 처럼 보여야 LangChain의 기본을 이해하였다고 볼 수 있음.
 
 ## 참고
 
