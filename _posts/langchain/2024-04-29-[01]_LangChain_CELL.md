@@ -47,7 +47,7 @@ LCELL은 Chain의 구성 요소를 나타내며, 각 단계는 `|` 기호로 구
 
 ### LCELL을 쓴 LangChain 예시
 
-다음은 LCELL을 사용하여 LangChain을 구성하는 예시 
+다음은 LCELL을 사용하여 LangChain을 구성하는 예시
 
 - `chain = prompt | llm | output_parser`
   - `Prompt -> LLM -> OutPutParser`이 `Chain`으로 연결되었음
