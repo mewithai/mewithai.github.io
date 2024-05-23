@@ -21,7 +21,7 @@ title_separator          : ""
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "JSKim"
 description              : "A place to organize your AI knowledge"
-url                      : "https://mewithai.github.io"
+url                      : "https://mewithai.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "mewithai/mewithai.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
