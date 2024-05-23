@@ -27,9 +27,7 @@ LangChain은 복잡한 개념을 포함하고 있어 처음 접하는 사람들�
 
  LangChain은 대규모 언어 모델(LLM)을 사용하여 질문에 답하는 과정을 단계적으로 연결하는 프레임워크. 각 단계는 연쇄적으로 연결되어 `Chain`을 형성.
 
-### LCELL이란?
-
-LCELL은 Chain의 구성 요소를 나타내며, 각 단계는 `|` 기호로 구분됨. LCELL은 LangChain에서 각 단계를 정의하고 연결하는 방법.
+LCELL은 Chain의 구성 요소를 나타내며, 각 단계는 `|` 기호로 구분됨.
 
 ![]({{ site.url }}{{ site.baseurl }}/assets/images/20240429142245.png)
 
