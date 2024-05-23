@@ -1,7 +1,8 @@
 ---
-permalink: /langchain/About-LangChain-LCELL/
+permalink: /langchain/About-LangChain-LCELL-240429/
 title: "LangChain의 LCELL 쉽게 이해하기"
 excerpt: "LangChain의 핵심 개념인 LCELL을 쉽게 이해할 수 있도록 정리합니다."
+author: "Jinsu Kim"
 toc: true
 toc_sticky: true
 toc_label: "목차"
@@ -57,16 +58,16 @@ LCELL은 Chain의 구성 요소를 나타내며, 각 단계는 `|` 기호로 구
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv(), override=True)
 
-# OpenAI 로드
+# LangChain관련 라이브러리 로드
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-# 객체 생성
+# 객체 생성, ChatModel 사용
 llm = ChatOpenAI(model = "gpt-3.5-turbo")
 output_parser = StrOutputParser()
 
-# 입력 템플릿 정의
+# 입력 템플릿 정의, 파라미터 없음
 template = """You are a helpful assistant. Hello?"""
 prompt = PromptTemplate.from_template(template)
 
