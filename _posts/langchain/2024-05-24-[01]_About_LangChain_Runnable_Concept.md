@@ -1,8 +1,8 @@
 ---
 permalink: /langchain/About-LangChain_Runnable-240524/
 title: "LangChain에서 Runnable은 어떤 것인가?"
-excerpt: "Coding에 비전공자로써 받아 들이는 `Runnable`의 개념은 어렵게만 느껴집니다. 이 글에서는 `Runnable`에대해서 개념을 잡고 LangChain에서 어떻게 사용되는지 설명합니다."
-author: "Jinsu Kim"
+excerpt: "LangChain Runnable은 단위 Process나 Task로 이해하면 된다. "
+author: "JS Kim"
 published: true
 toc: true
 toc_sticky: true
@@ -16,8 +16,6 @@ tags:
 
 ## 배경과 목표
 
- Coding에 비전공자로써 받아 들이는 `Runnable`의 개념은 어렵게만 느껴집니다. 이 글에서는 LangChain에서 사용되는 `Runnable`의 개념과 어떻게 사용되는지 설명합니다.
-
 ### 목표
 
 - `LangChanin`에서 `Runnable`에 대해서 이해하고 `Runnable Interface`로 개념을 연결하기
@@ -29,10 +27,14 @@ tags:
  `Runnable`이라고 하면 주로 자바(Java)에서 `멀티프로세싱`을 위한 병렬 처리 작업(Task)을 정의하는 데 사용. 하지만 이 개념을 `LangChain`에서 그대로 적용하려고 하면 혼란스러울 수 있음. 따라서 LangChain에서의 Runnable은 JAVA의 개념을 버리고 새로운 개념으로 이해하는 것이 더 쉽다.
  
  LangChain에서의 Runnable은 고유한 의미를 지니며, 주로 `Language Models`(예: OpenAI의 GPT)와의 상호작용을 관리하고 조정하는 `작업 단위`를 나타냄
-
-따라서 LangChain에서의 Runnable은 `자연여 처리 파이프라인` 내에서 특정 작업(예: 텍스트 생성, 질의 응답 등)을 수행할 수 있는 컴포넌트로  `NLP 모델의 입력과 출력을 관리하는 것`이라고 이해할 것
+ 
+ 따라서 LangChain에서의 Runnable은 `자연여 처리 파이프라인` 내에서 특정 작업(예: 텍스트 생성, 질의 응답 등)을 수행할 수 있는 컴포넌트로  `NLP 모델의 입력과 출력을 관리하는 것`이라고 이해할 것
 
 ### 기본형태의 Runnable
+
+ Runnable은 Runnable을 상속받아서 생성가능
+
+ Runnable을 상속받으면 Runnable의 기본능력을 모두 이어 받게 된다. 아래는 invoke를 Override한 Case..
 
 ```python
 # Runnable 정의
@@ -50,14 +52,12 @@ text_gen = TextGeneratorRunnable(model_name="gpt-4")
 result_invoke = text_gen.invoke("What is the capital of Germany?")
 print(result_invoke)  # "The capital of Germany is Berlin."
 ```
-
- 위는 개념적으로만 표현한 Runnable의 예시이다. LLM으로 질의를 하기 위해서 `Runnable`을 상속받은 객체를 만들고 LLM으로 입력하고 결과를 출력하였다.
  
  그런데, 이런 단순한 기능은 함수로도 충분히 구현이 가능한데 왜 `Runnable`을 사용을 할까?
 
 ### Why Runnable?
 
- LangChain은 Chain으로 연결된 `Component`들을 통하면서 응답이 만들어 지는데, 각각의 Chain 컴포턴트들은 사로 다른 입출력 구조를 가진다. 그래서 Socket처럼 뭔가 공통의 구조를 가진 애를 만들어야 하는데 얘가 `Runnable`이다. 그리고 이 구조를 `Runnable Interface`라고 한다.
+ LangChain은 Chain으로 연결된 `Component`들을 통하면서 응답이 만들어 지는데, 각각의 Chain `Component`들은 서로 다른 입출력 구조를 가짐. 그래서 서로 연결하려면 Socket처럼 뭔가 공통의 구조를 가진 애를 만들어야 하는데 그 역활을 하는 애가 `Runnable`이다. 그리고 같은 구조로 서로를 연결하는 것을 `Runnable Interface`라고 한다.
 
  
 | Component    | Input                                              | Output           |
@@ -69,7 +69,7 @@ print(result_invoke)  # "The capital of Germany is Berlin."
 | Retriever    | Single string                                      | List of documents|
 | Tool         | Single string or dictionary depending on the tool  | Depends on the tool   |
 
-위의 예시처럼 각각의 `Component`들은 서로 입출력형태를 가진다. 얘들을 모두 Runnable형태로 바꾼다면 서로서로 그냥 딱딱 붙을 수 있는 구조가 되는 것이다.
+위의 예시처럼 각각의 `Component`들은 서로 입출력형태를 가진다. 얘들을 모두 Runnable형태로 바꿔서 통일시키면 서로서로 그냥 딱딱 붙을 수 있는 구조가 되는 것이다.
 
 ### Runnable의 잇점
 
@@ -108,25 +108,11 @@ output = chain.invoke(input_text)
 print(output)  # Output: "9 5 8 11 9 4"
 ```
 
-만약 `LCELL`을 하지 않았다면 각각의 Return 값을 다시 다음 객체의 Method로 넣어야 하지 않았을까? 어디에 어떤 값이 돌아오는지도 계속 Logger를 넣어야 했을 듯하다.
-
-아래처럼 말이다.
-
-```python
-input_text = "LangChain makes building applications with LLMs easy"
-tokens = tokenizer(input_text)
-logger.printf(tokens)
-lengths = length_calculator(tokens)
-logger.printf(lengths)
-output = length_concatenator(lengths)
-logger.printf(output)
-```
-
-Runnable 클래스를 상속받아 구현하면, 각 단계가 명확하게 분리되고, 체인을 구성하는 데 있어 보다 직관적인 표현을 사용할 있다. 또한, LangChain의 기능과의 통합이 용이해져 복잡한 파이프라인을 구성할 때 유리하다.
+ Runnable 클래스를 상속받아 구현하면, 각 단계가 명확하게 분리되고, 체인을 구성하는 데 있어 보다 직관적인 표현을 사용할 있다. 또한, LangChain의 기능과의 통합이 용이해져 복잡한 파이프라인을 구성할 때 유리하다.
 
 ### Runnable의 기본 Method
 
-현재 시점(24년6월)기준 `Runnable`의 공식 문서는 [langchain_core.runnables.base.Runnable](https://api.python.langchain.com/en/latest/runnables/langchain_core.runnables.base.Runnable.html#)에서 확인할 수 있다.
+ `Runnable`의 기본 정보는 [langchain_core.runnables.base.Runnable](https://api.python.langchain.com/en/latest/runnables/langchain_core.runnables.base.Runnable.html#)에서 확인할 수 있다.
 
 문서에 나오는 다수의 Mehtod 중 아래의 3*2 가지만 기억하자.
 
@@ -138,9 +124,9 @@ Runnable 클래스를 상속받아 구현하면, 각 단계가 명확하게 분�
 
  모든 Method는 `Config`를 통해서 Tracing이나 Debugging 위한 Tag나 메타데이터를 추가할 있고,  `input_schema`, `output_schema`, `config_schema`를 통해서 디테일하게 설정을 할 수 있다.
 
-### Runnable의 입출력 Schema
+### Runnable의 입출력은 Pydantic Type
 
-각각의 Component들을 `Runnable Interface`로 붙인다면 데이터도 이가 딱 맞아야 한다. Runnable에서는 입출력 데이터 `input_schema`, `output_schema`를 `Pydantic`을 이용하여 정의함으로써 딱 주어진 형태의 데이터가 입출력되도록 제한한다.
+각각의 Component들을 `Runnable Interface`로 연결한다면 데이터도 이가 딱 맞아야 한다. `Runnable`에서는 입출력 데이터 `input_schema`, `output_schema`를 `Pydantic`을 이용하여 정의함으로써 딱 주어진 형태의 데이터가 입출력되도록 제한한다.
 
 앞서 코드 `Tokenizer`에서 입출력의 형태를 출력해보면 다음과 같다.
 
@@ -159,30 +145,13 @@ tokenizer = Tokenizer()
 >>> tokenizer.get_input_schema().schema()
 {'title': 'TokenizerInput'}
 
->>> tokenizer.get_output_schema().__annotations__
-{'__root__': +Output}
-
-###
-
->>> tokenizer.get_output_schema()
-<class 'pydantic.v1.main.TokenizerOutput'>
-
->>> tokenizer.get_output_schema().__annotations__
-{'__root__': +Output}
-
->>> tokenizer.get_output_schema().schema()
-{'title': 'TokenizerOutput'}
-
->>> for field_name, field_info in tokenizer.get_output_schema().__fields__.items():
-...     print(f"{field_name}: {field_info}")
-... 
-__root__: name='__root__' type=Optional[Any] required=False default=None
-
 ```
 
 `pydantic.v1.main.TokenizerOutput`에서 입출력이 Pydantic임을 알 수 있다.
 
-Pydantic에서 `__root__`는 특수한 경우에 사용되는 Field명이다. 여기에서는 출력이 한개인지라 저렇게 표현이 되었다.
+### Runnable의 입출력 Schema()를 통해서 Json으로 확인
+
+`input_schema`, `output_schema`은 Pydantic인데 이는 scheme()를 통해서 JSON 형태로 확인할 수 있다.
 
 ## 결론
 
@@ -194,4 +163,5 @@ Pydantic에서 `__root__`는 특수한 경우에 사용되는 Field명이다. �
 - [LangChain Interface](https://js.langchain.com/v0.1/docs/expression_language/interface/)
 - [LangChainn Runnable Interface](https://python.langchain.com/v0.1/docs/expression_language/interface/)
 - [LangChain streaming](https://js.langchain.com/v0.1/docs/expression_language/streaming/)
+- [LangChain Input/Output Scheme](https://python.langchain.com/v0.1/docs/expression_language/interface/#input-schema)
 - [참고](https://jordan-mungujakisa.medium.com/the-langchain-interface-chains-and-runnables-cd2f2cb6b4d6)

@@ -2,7 +2,7 @@
 permalink: /langchain/About-LangChain-LCELL-240429/
 title: "LangChain의 LCELL 쉽게 이해하기"
 excerpt: "LangChain은 복잡한 개념을 포함하고 있어 처음 접하는 사람들에게 어려울 수 있는데, 이 글에서는 LangChain의 핵심 개념인 LCELL을 쉽게 설명하여, 단순하고 명확하게 이해할 수 있도록 돕고자함."
-author: "Jinsu Kim"
+author: "JS Kim"
 published: true
 toc: true
 toc_sticky: true
