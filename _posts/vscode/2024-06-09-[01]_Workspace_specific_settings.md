@@ -17,7 +17,7 @@ tags:
 
 `Markdown Paste Plugin`로 Markdown 문서에 Image를 붙이는데 특정 프로젝트에서는 정해진 경로에 붙이고 싶다.
 
-Ex) Jekyll기반 Blog를 쓸때는 `{BlogHome}/assets/images/` 에다가 붙여야함. Default value is ${fileDirname}.
+Ex) Jekyll기반 Blog를 쓸때는 `{BlogHome}/assets/images/` 에다가 붙여야함. Default value is `${fileDirname}`.
 
 ### 목표
 
@@ -27,11 +27,11 @@ Ex) Jekyll기반 Blog를 쓸때는 `{BlogHome}/assets/images/` 에다가 붙여�
 
 ### User Setting과 Workspace Setting 그리고 Default Setting
 
-VSCODE의 Setting에는 총 3가지가 있다. User, Workspace, Default. 각각의 셋팅에 따라서 `Setting.json` 파일도 있다. 
+VSCODE의 Setting에는 총 3가지가 있다. `User`, `Workspace`, `Default`. 각각의 셋팅에 따라서 `Setting.json` 파일도 있다. 
 
 Setting을 변경하는 방법도 `UI`를 통한 방법고 `JSON`파일을 직접 바꾸는 2가지 방법이 있다.
 
-이번 경우는 Workspace Setting을 바꾸면 된다.
+이번 경우는 **Workspace Setting**을 바꾸면 된다.
 
 ### 바꾸기
 
