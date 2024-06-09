@@ -31,7 +31,18 @@ VSCODE의 Setting에는 총 3가지가 있다. `User`, `Workspace`, `Default`. �
 
 Setting을 변경하는 방법도 `UI`를 통한 방법고 `JSON`파일을 직접 바꾸는 2가지 방법이 있다.
 
-이번 경우는 **Workspace Setting**을 바꾸면 된다.
+이번 경우는 **
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is ahead of 'origin/main' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   _posts/vscode/2024-06-09-[01]_Workspace_specific_settings.md
+#
+**을 바꾸면 된다.
 
 ### 바꾸기
 
