@@ -15,7 +15,7 @@ tags:
 
 ## 배경과 목표
 
-`Markdown Paste Plugin`로 Markdown 문서에 Image를 붙이는데 특정 프로젝트에서는 정해진 경로에 붙이고 싶다.
+`Markdown Paste Plugin`로 Markdown 문서에 Image를 붙이는데 특정 프로젝트에서는 기본과 다른 경로에 붙이고 싶다.
 
 Ex) Jekyll기반 Blog를 쓸때는 `{BlogHome}/assets/images/` 에다가 붙여야함. Default value is `${fileDirname}`.
 
@@ -27,15 +27,13 @@ Ex) Jekyll기반 Blog를 쓸때는 `{BlogHome}/assets/images/` 에다가 붙여�
 
 ### User Setting과 Workspace Setting 그리고 Default Setting
 
-VSCODE의 Setting에는 총 3가지가 있다. `User`, `Workspace`, `Default`. 각각의 셋팅에 따라서 `Setting.json` 파일도 있다. 
+VSCODE의 Setting에는 `User`, `Workspace`, `Default` 총 3가지가 있다. 각각의 셋팅에 따라서 `Setting.json` 파일도 따로 있다.
 
-Setting을 변경하는 방법도 `UI`를 통한 방법고 `JSON`파일을 직접 바꾸는 2가지 방법이 있다.
-
-이번 경우는 **Workspace Setting**을 바꾸면 된다.
+Setting을 변경하는 방법은 `UI`를 통한 방법과 `JSON`파일을 직접 바꾸는 2가지 방법이 있다.
 
 ### 바꾸기
 
-- Setting열기: `Ctrl + Shift + p` -> Setting UI 입력
+- Setting열기: `Ctrl + Shift + p` -> `Setting UI` 입력
 - Workspace Setting 선택
 - Markdown Paste Setting 변경
   - 주) Markdown Plugin이랑 다른 애니까 헷갈리지 말자.
@@ -49,4 +47,4 @@ Workspace별로 셋팅값을 바꿀 수 있다는 것을 알았고, Markdown Pas
 
 참고로 이 셋팅은 Workspace -> `.vscode` -> `settings.json` 파일에 저장된다.
 
-따라서 이 파일을 지우면 설정이 삭제된다. 
+따라서 이 파일을 지우면 설정이 삭제된다.
