@@ -8,10 +8,11 @@ toc: true
 toc_sticky: true
 toc_label: "목차"
 categories:
-  - blog
+  - langchain
 tags:
-  - github
-  - blog
+  - python
+  - ai
+  - llm
 ---
 
 ## 배경과 목표

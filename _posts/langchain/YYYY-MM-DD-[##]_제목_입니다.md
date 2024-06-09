@@ -1,28 +1,37 @@
 ---
-permalink: /blog/About-Jekyll-240523/
-title: "Jekyll란 무엇인가"
-excerpt: "Jekyll에 대해서 쉽게 설명합니다."
+permalink: /vscode/Workspace-Specific-Settings-in-VSCODE/
+title: "VSCODE에서 Workspace별로 Setting 다르게하기"
+excerpt: "각각의 작업별로 Setting을 다르게 하여 작업 효율을 올리자."
 author: "JS Kim"
-published: false
+published: true
 toc: true
 toc_sticky: true
 toc_label: "목차"
 categories:
-  - blog
+  - vscode
 tags:
-  - github
-  - blog
+  - vscode
 ---
 
 ## 배경과 목표
 
+Markdown Paste Plugin을 쓰는데 특정 프로젝트에서는 Image를 붙일때 다른 경로에 붙이고 싶다.
 
-![]({{ site.url }}{{ site.baseurl }}/assets/images/20240429142245.png)
+Ex) Jekyll기반 Blog를 쓸때는 `../../assets/images/` 에다가 붙여야함. Default value is ${fileDirname}.
 
 ### 목표
 
+- Workspace별 설정을 알고 Markdown Paste의 Image 경로를 바꾼다.
+
 ## 본론
 
+- Setting열기: `Ctrl + Shift + p` --> Setting 입력
+
+![]({{ site.url }}{{ site.baseurl }}/assets/images/20240609105855.png)
+
+
 ## 결론
+
+
 
 ## 참고
