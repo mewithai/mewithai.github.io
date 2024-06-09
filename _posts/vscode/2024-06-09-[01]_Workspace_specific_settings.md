@@ -45,6 +45,8 @@ Setting을 변경하는 방법도 `UI`를 통한 방법고 `JSON`파일을 직�
 
 ## 결론
 
-이 셋팅은 Workspace -> `.vscode` -> `settings.json` 파일에 저장된다.
+Workspace별로 셋팅값을 바꿀 수 있다는 것을 알았고, Markdown Paste에 적용 Image에 대한 경로를 변경하여 적용하였다. Mission 완료!
+
+참고로 이 셋팅은 Workspace -> `.vscode` -> `settings.json` 파일에 저장된다.
 
 따라서 이 파일을 지우면 설정이 삭제된다. 
