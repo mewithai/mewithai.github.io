@@ -10,9 +10,8 @@ toc_label: "목차"
 categories:
   - langchain
 tags:
-  - python
-  - ai
-  - llm
+  - 자동화Bot
+  - AI Agent
 ---
 
 ## 배경과 목표

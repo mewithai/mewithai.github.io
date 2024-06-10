@@ -8,9 +8,10 @@ toc: true
 toc_sticky: true
 toc_label: "목차"
 categories:
-  - vscode
+  - langchain
 tags:
-  - vscode
+  - 자동화Bot
+  - AI Agent
 ---
 
 ## 배경과 목표
@@ -29,16 +30,16 @@ Python Code에다가 Prompt를 붙여 놓는 것과 최신 Prompt를 git 처럼 
 
 `LangSmith`에는 왼쪽 메뉴 중에 제일 하단에 Prompt를 추가할 수 있는 버튼이 있다.
 
-Prompt의 종류는 다음과 같다.
+![]({{ site.url }}{{ site.baseurl }}/assets/images/images/20240610140239.png)
+
+위 그림에서 처럼 Prompt의 종류는 다음과 같이 분류할 수 있다.
 
 - 공개 여부 : Private or Public
 - Prompt 종류 : Chat-Stype Prompt or Instruct-Style Prompt
 
-![]({{ site.url }}{{ site.baseurl }}/assets/images/images/20240610140239.png)
-
 ### Instruct-Style Prompt
 
-아래처럼 하면 된다.
+단답형으로 지시를 하고 답을 얻는 Prompt인데 아래를 잘 보면 이해할 수 있다. 
 
 ![]({{ site.url }}{{ site.baseurl }}/assets/images/20240610141456.png)
 
@@ -54,7 +55,7 @@ Prompt는 PlayGround로 이동하여 바로 Try 해볼 수 있다.
 
 ### Chat-Stype Prompt
 
-똑같다.
+똑같다. 해봐라.
 
 ## 결론
 

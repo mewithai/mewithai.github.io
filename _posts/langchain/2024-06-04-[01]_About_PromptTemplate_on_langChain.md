@@ -8,10 +8,10 @@ toc: true
 toc_sticky: true
 toc_label: "목차"
 categories:
-  - blog
+  - langchain
 tags:
-  - github
-  - blog
+  - 자동화Bot
+  - AI Agent
 ---
 
 ## 목표
