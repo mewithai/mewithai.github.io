@@ -3,7 +3,7 @@ permalink: /langchain/register_prompt_with_langsmith_and_run_240610/
 title: "LangSmith를 활용하여 Prompt 관리"
 excerpt: "Prompt를 Hard Coding으로 넣는 것은 이제 그만 하고, 체계적으로 관리하자."
 author: "JS Kim"
-published: false
+published: true
 toc: true
 toc_sticky: true
 toc_label: "목차"
