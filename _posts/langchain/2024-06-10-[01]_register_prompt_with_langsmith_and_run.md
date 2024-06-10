@@ -34,23 +34,23 @@ Prompt의 종류는 다음과 같다.
 - 공개 여부 : Private or Public
 - Prompt 종류 : Chat-Stype Prompt or Instruct-Style Prompt
 
-![](../../assets/images/images/20240610140239.png)
+![]({{ site.url }}{{ site.baseurl }}/assets/images/images/20240610140239.png)
 
 ### Instruct-Style Prompt
 
-아래처럼 하면 된다. 
+아래처럼 하면 된다.
 
-![](../../assets/images/20240610141456.png)
+![]({{ site.url }}{{ site.baseurl }}/assets/images/20240610141456.png)
 
-Prompt는 PlayGround로 이동하여 바로 Try 해볼 수 있다. 
+Prompt는 PlayGround로 이동하여 바로 Try 해볼 수 있다.
 
 여러개의 입력을 시험하려면 Dataset을 그렇지 않으면 Manual로 바로 `f-String`으로 바꿔 볼 수 있음
 
-![](../../assets/images/20240610143332.png)
+![]({{ site.url }}{{ site.baseurl }}/assets/images/20240610143332.png)
 
 시험 결과에 대해서 하단에 Save Example후 Commit를 하면 시험결과에 대해서도 이력이 남아서 관리됨
 
-![](../../assets/images/20240610143510.png)
+![]({{ site.url }}{{ site.baseurl }}/assets/images/20240610143510.png)
 
 ### Chat-Stype Prompt
 
