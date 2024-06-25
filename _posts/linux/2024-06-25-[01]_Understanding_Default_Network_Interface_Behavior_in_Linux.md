@@ -1,4 +1,5 @@
 ---
+lang: en
 permalink: /linux/Understanding_Default_Network_Interface_Behavior_in_Linux_240625/
 title: "Understanding Default Network Interface Behavior in Linux"
 excerpt: "Exploring why Linux network interfaces often default to DHCP and how network management tools handle interface configuration."
