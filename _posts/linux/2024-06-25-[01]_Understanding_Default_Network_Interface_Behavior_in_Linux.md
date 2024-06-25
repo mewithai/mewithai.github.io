@@ -17,6 +17,8 @@ tags:
   - Network Interfaces
 ---
 
+## Introduction
+
 When configuring network interfaces on a Linux system, especially in Debian-based distributions, you might notice that interfaces often obtain IP addresses via DHCP even if not explicitly configured to do so. This post delves into why this happens and how network interfaces are managed by default.
 
 ## Default DHCP Behavior
