@@ -6,7 +6,7 @@ author: "JS Kim"
 published: true
 toc: true
 toc_sticky: true
-toc_label: "Contents"
+toc_label: "Table of Contents"
 categories:
   - linux
 tags:
