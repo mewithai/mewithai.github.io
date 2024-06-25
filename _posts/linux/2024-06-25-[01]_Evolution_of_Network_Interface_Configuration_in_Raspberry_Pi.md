@@ -1,6 +1,6 @@
-
 ---
 lang: en
+permalink: /linux/Evolution_of_Network_Interface_Configuration_in_Raspberry_Pi_240625/
 title: "Evolution of Network Interface Configuration in Raspberry Pi"
 excerpt: "Explore the historical changes and current best practices for configuring network interfaces on the Raspberry Pi."
 author: "JS Kim"
